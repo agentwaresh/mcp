@@ -4,19 +4,38 @@
   "description": "MCP server for Agentware: browse and buy agent software, and pay per call for inference, on Robinhood Chain.",
   "type": "module",
   "license": "MIT",
-  "bin": { "agentware-mcp": "dist/index.js" },
+  "bin": {
+    "agentware-mcp": "dist/index.js"
+  },
   "main": "dist/index.js",
-  "files": ["dist", "README.md", "LICENSE"],
-  "engines": { "node": ">=20" },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json && chmod +x dist/index.js",
     "dev": "tsc -p tsconfig.json --watch",
     "start": "node dist/index.js",
     "smoke": "node scripts/smoke.mjs"
   },
-  "repository": { "type": "git", "url": "git+https://github.com/agentwaresh/mcp.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agentwaresh/mcp.git"
+  },
   "homepage": "https://agentware.sh",
-  "keywords": ["mcp", "agentware", "x402", "robinhood-chain", "usdg", "agents", "inference"],
+  "keywords": [
+    "mcp",
+    "agentware",
+    "x402",
+    "robinhood-chain",
+    "usdg",
+    "agents",
+    "inference"
+  ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
     "viem": "^2.56.0",
@@ -25,5 +44,8 @@
   "devDependencies": {
     "@types/node": "^22.0.0",
     "typescript": "^5.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
